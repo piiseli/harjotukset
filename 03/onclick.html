@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokeiluja</title>
+</head>
+<body>
+    <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+    <h1 onclick="changeText(this)">Klikkaa mua!</h1>
+
+    <script>
+    function changeText(id) {
+      id.innerHTML = "Hups!";
+    }
+    </script>
+    <h2>JavaScript HTML Events</h2>
+<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">Mitä kello on?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("date").innerHTML = Date();
+}
+</script>
+
+<p id="date"></p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Workshop 2</title>
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<h1>Workshop 2: JavaScript BOM</h1>
+		
+		<h2>Exercise 3</h2>
+		<p>Create a JavaScript if-statement, which checks if the user is using Mozilla browser. If it is, the browser should load http://www.mozilla.org" page. If not, the browser 
+		should load some other website. Create simple pages to test the code.</p>
+		<h2>Exercise 1</h2>
+		<script>
+            document.write("<h2>Exercise 1</h2><em><strong>If I had nine hours to chop down a tree, I'd spend the first six sharpening my ax.</strong> <br />"+
+                "-- Abraham Lincoln</em></p>");
+		</script>
+		<h2>Exercise 2</h2>
+		<script>   
+			for(var i=0; i<=5; i++){
+				document.write("Line of text<br>");
+			}
+		</script>
+		<h2>Exercise 3</h2>
+		<script>//Ei toimi!!
+			/*if (navigator.appname ="Mozilla"){
+                navigator.href="http://www.microsoft.com";
+            }
+            else{
+                navigator.href="http://www.hs.fi"
+			}
+			if(navigator.userAgent.indexOf("Firefox") != -1 ){
+				alert('Firefox') ;
+				if ( navigator.userAgent.indexOf("Edge") > -1 ){
+					//navigator.href="http://www.microsoft.com";
+				}
+				else{
+					//navigator.href="http://www.hs.fi"
+				}*/
+		</script>
+		<h2><a href="ask.html">Exercise 4</h2></a>
+		<img src="1.jpg" alt="Kuva1"><br>
+		<h2>Excercise 5</h2>
+		<p></p>
+		<script>
+			//one specific image
+			document.write("<img src='3.jpg'><br>");
+		</script>
+		<script>
+			//random image
+			//var index = Math.round(Math.random() *2);
+			var images = [
+				"2.jpg",
+				"3.jpg",
+				"4.jpg"
+			];
+			//index = 0;
+			var index = images[Math.floor(Math.random() * (images.length))];
+			//var index = images[Math.floor(Math.random() * 4)];
+			//document.write(images[index]);
+			document.canvas.src(images[index]);
+			//document.images[0].src = images[index];
+		</script>
+	</body>
+</html>
