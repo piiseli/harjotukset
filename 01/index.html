@@ -8,13 +8,116 @@
 </head>
 <body>
     Tähän tulee koodia:
-    <script>
+    <h4>Eka harjotus: alert etunimi ja sitte molemmat</h4>
+    Myöhempien scriptien testausta varten disabloin tämän, ettei tartte koko ajan painaa nappia
+    <script>/*Myöhempien scriptien testausta varten disabloin tämän, ettei tartte koko ajan painaa nappia
         var firstname = "Pia";
         var lastname = "Kontiainen";
         alert(firstname);
         document.write(lastname);
         alert(firstname+" "+lastname);
-        console.log(lastname+", "+firstname);
+        //console.log(lastname+", "+firstname);*/
     </script>
+        <pre><code>
+            var firstname = "Pia";
+            var lastname = "Kontiainen";
+            alert(firstname);
+            document.write(lastname);
+            alert(firstname+" "+lastname);
+            console.log(lastname+", "+firstname);
+        </code></pre>
+        <h4>Toka harjotus: eka if-juttu</h4>
+    <script>
+        var x = 50;
+        var order = 'Beer';
+        if (x > 50) {
+        document.write("He's over 50!" );
+        } else if (x <= 50 && x > 30){
+        document.write("Middle aged man, who ordered some "+order);
+        } else
+        document.write("It seems you're a bit underaged.");
+    </script>
+            <pre><code>
+            var x = 50;
+            var order = 'Beer';
+            if (x > 50) {
+            document.write("He's over 50!" );
+            } else if (x <= 50 && x > 30){
+            document.write("Middle aged man, who ordered some "+order);
+            } else
+            document.write("It seems you're bit underaged.");</pre></code>
+            <pre><code>
+                Tehtävänanto:
+                Modify the code so, that it will
+                    • print out HTML-tags to produce formatted output on the page, for example the output could be
+                    He’s over 50 or <strong>Middle aged man</strong> -tags
+                    • have more paths (else if -statements) for different age ranges
+                    • output different messages for each
+                    • output the message to the console as well
+            </pre></code>
+            <h4>Neljäs harjotus: </h4>
+    <script>
+        var lista = [];
+        for (var i=0; i<15; i++) {
+        lista.push( Math.random() );
+        }
+        for(i=0;i <lista.length; i++){
+            document.write(lista[i],"<br>");
+        }
+    </script>
+        <pre><code></code>
+            var arr = [];
+            for (var i=0; i<15; i++) {
+            arr.push( Math.random() );
+            }
+        </pre></code>
+        <h4>Viimenen harjotus, objektit </h4>
+        <pre><code>
+            // Define an object to hold data for a person
+            var person = {
+            firstName:"John",
+            lastName:"Doe",
+            age:50,
+            eyeColor:"blue"
+            };
+            document.write(person.age);
+        </pre></code>
+        <script>
+            var person = {
+                firstName:"John",
+                lastName:"Doe",
+                age:50,
+                eyeColor:"blue"
+                };
+                document.write(person.age);
+        </script>
+        <pre><code>
+            Modify the code so, that it will
+                • have a field for address and telephone.
+                • have one anonymous method named printInfo, which will print all the information of the
+                person object in the console
+                • create an array with 4 person objects in it. Then loop through the array and print out the first
+                and lastname for each item
+    </pre></code>
+    <script>
+        var person = {
+            firstName:"John",
+            lastName:"Doe",
+            age:50,
+            eyeColor:"blue",
+            address:"Kotikatu",
+            tel:"1234"
+            };
+            document.write(person.tel);
+            document.write("<h4>Tän pitäs tulostaa tiedot, tulostaa avaimet</h4>");
+            //var printPerson = function(person){
+            //document.write(printPerson);}
+            Object.entries(person).forEach(
+                ([prop]) => document.write(prop+"; "));
+        document.write("<h4>toinen yritys, tämä tulostaa arvot</h4>");
+            Object.values(person).forEach(prop => document.write(prop+"; "));
+    </script>
+    <h4>harjotus, array </h4>
+
 </body>
 </html>

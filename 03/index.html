@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Workshop 3</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="utilities.css">
+        <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+        <script>
+            function clickMe() {
+                alert("You clicked me!  " + Date());
+            }
+            function showTable(){
+                //script.src("build-table.js");
+                //window.location="build-table.html"; --avaa samaan ikkunaan
+                window.open('build-table.html', '_blank');//avaa uuteen ikkunaan
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container"> 
+            <h2>Exercise 1</h2>
+            Eka nappi pompauttaa ikkunan päivämäärällä<br><br>
+            <button onclick="clickMe()" class="btn">Click me</button>
+        </div><br>
+        <div class="container">
+            <button onclick="showTable()" class="btn">Show table</button><br><br>
+
+            The second button should call a function called showTable()". ShowTable function should output a simple HTML-table (below) to the page. Use document.write to print data. Feel free to modify the data on the table.</li>
+        
+            <table id="example" class="display">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>$170,750</td>
+                    </tr>
+                    <tr>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>$86,000</td>
+                    </tr>
+                    <tr>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>$433,060</td>
+                    </tr>
+                    <tr>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>$162,700</td>
+                    </tr>              
+                </tbody>
+            </table>
+        </div><br>
+        <div class="container"> 
+            <button onclick="getLocation()"class="btn">Try It</button></div>
+            <p id="geo"></p>
+        <div class="container">
+            <button id="show" class="btn">Show my location</button>
+            <div id="message"></div>
+        </div><br>
+        <script src="js/location2.js"></script>
+        <div class="container">
+                The last button should check Geolocation of the user, and output it to the console and to the page. Note: Some browsers might not allow you to do this. Try different browsers if you get errors.</p>
+        </div>  
+        <div class="container">
+            <h2 id="hiiri">Exercise 2</h2>
+            <div class="container" id="outputDiv"></div>
+            Add an onMouseOver event on the Heading "Exercise 2" of this page. It should fire when the users mouse is moved over it. Output "Stepped over my a mouse!" on the console.<br>
+            Add another event, which will fire then the mouse leaves the Exercise 2 -heading. This time show an alert window to the user saying: "Bye bye mouse!"
+            <script>
+                document.getElementById("hiiri").addEventListener("mouseover", mouseOver);
+                document.getElementById("hiiri").addEventListener("mouseout", mouseOut);
+                function mouseOver() {
+                  document.getElementById("hiiri").style.color = "red";
+                  document.getElementById("outputDiv").innerHTML = "<h1>Stepped over my mouse!!</h1>";
+                  //document.write("Stepped over my a mouse!");
+                }
+               function mouseOut() {
+                  document.getElementById("hiiri").style.color = "black";
+                  alert("Bye bye mouse!!");
+                }
+            </script>
+        </div>  
+        <div class="container"> 
+            <h2>Exercise 3</h2>
+            <p>Below you will see a simple form.</p>
+            <ul>
+            <li>Add onfocus -event to the textarea below. When the user enters the textarea, it should show a text saying: "Please fill in the form with proper data.". You can try modifying the background color of the box as well.  </li>
+            <li>Try to use onkeydown -event on the textarea. It should calculate the number of keypresses and output them on the screen. Could you think other smart ways to use it?</li>
+            <li>When the form button is clicked, check if the textarea is empty. Notify the user with appropriate message. HINT: You can access the Textarea using the following command:   <i>document.getElementById("textdata").value</i>. We will study the forms deeper in Workshops 4 and 5.</li>
+            </ul>
+            <form>
+                <textarea class="textinput" placeholder="Comment" rows="4" cols="80" id="textdata" onmouseover="kirjoita()" ;onkeydown="myFunction()"></textarea><br>
+                <span id="charcount"></span>
+                <button class="btn">Send me</button>
+            </form>
+            <script>
+                function myFunction() {
+                  alert("You pressed a key inside the input field");
+                }
+            </script> 
+            <script> 
+                function kirjoita() {
+                    document.getElementById("textdata").value="Please fill in the form with proper data."
+                }
+                // document.getElementById("hiiri").addEventListener("mouseover", mouseOver);
+                //document.getElementById("hiiri").addEventListener("mouseout", mouseOut);
+                function mouseOver() {
+                  document.getElementById("hiiri").style.color = "red";
+                  document.getElementById("outputDiv").innerHTML = "<h6>Stepped over my mouse!!</h6>";
+                  //document.write("Stepped over my a mouse!");
+                }
+               function mouseOut() {
+                  document.getElementById("hiiri").style.color = "black";
+                  
+                }
+            </script>
+        </div>  
+        <div class="container">
+            <h2>Exercise 4</h2>
+            <div id="coordinates"></div>
+            <p>Add onMouseMove -event to the DIV-element above. When you move mouse over the DIV (rectangle) the program should output the coordinates of your pointer. Try first outputting to the console using console.log.</p>
+            <p> When the program is working, you can try outputting the text on the H2 element with an id "coords" the box</p> 
+            <p>HINT: You need to use document.getElementById("coordinates").innerHTML to achieve this.</p>
+        </div>
+    </body>
+</html>
+
+
