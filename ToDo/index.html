@@ -11,20 +11,18 @@
 		integrity=
 "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 		crossorigin="anonymous">
-
+<link rel="stylesheet" href="style.css">
 	<script src="app.js"></script>
 
 	<title>To Do List</title>
 </head>
 
 <body>
-	<header class="bg-success text-white p-5">
+	<header class="bg-info text-white p-1">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12">
-					<font face="Comic sans MS"
-						size="11" color="black">
-						<strong>ToDo List</strong>
+					<h1>Kauppalista</h1>
 					</font>
 					
 				</div>
@@ -32,8 +30,8 @@
 		</div>
 	</header>
 
-	<div class="container mt-3">
-		<h2>Add Items</h2>
+	<div class="container mt-3" id="tuote">
+		<h2>Lisää tuote</h2>
 
 		<label id="lblsuccess" class="text-success"
 				style="display: none;">
@@ -45,17 +43,18 @@
 
 					<input type="text" onkeyup=
 						"toggleButton(this, 'submit')"
-						class="form-control" id="item">
+						class="form-control rounded-0" id="item">
 				</div>
 
 				<div class="col-lg-5 col-md-5 col-sm-5">
-				<input type="submit" class="btn btn-dark"
+				<input type="submit" class="btn bg-warning rounded-0"
 						id="submit" value="Submit" disabled>
+						
 				</div>
 			</div>
 		</form>
 
-		<h3 class="mt-4">Tasks</h3>
+		<h3 class="mt-4">Ostoslista</h3>
 
 		<form id="addForm">
 			<ul class="list-group" id="items"></ul>
