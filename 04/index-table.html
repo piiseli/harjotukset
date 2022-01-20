@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://unpkg.com/tabulator-tables@5.0.10/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.0.10/dist/js/tabulator.min.js"></script>
+	<title>Workshop 4 - Tables</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="jquery.alerts.css" />
+	<script src="jquery.alerts.js"></script>
+</head>
+<body class="ws4">
+	<h1 id="otsikko">Workshop 4: Tables</h1>
+		<h2>Exercise 5: Tables</h2>
+	<ul>
+		<li class="surprise">
+			Write a JavaScript function to add rows to a table. Rows can contain
+			preset values.
+		</li>
+		<li>
+			When your code is working, try reading the content to be added from a
+			set of fields below the table.
+		</li>
+	</ul>
+	<br />
+	<table id="auto" class="display">
+		<thead>
+			<tr>
+				<th id="name">Name</th>
+				<th id="position">Position</th>
+				<th id="salary">Salary</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Tiger Nixon</td>
+				<td>System Architect</td>
+				<td>$320,800</td>
+			</tr>
+			<tr>
+				<td>Garrett Winters</td>
+				<td>Accountant</td>
+				<td>$170,750</td>
+			</tr>
+			<tr>
+				<td>Ashton Cox</td>
+				<td>Junior Technical Author</td>
+				<td>$86,000</td>
+			</tr>
+			<tr>
+				<td>Cedric Kelly</td>
+				<td>Senior Javascript Developer</td>
+				<td>$433,060</td>
+			</tr>
+			<tr>
+				<td>Airi Satou</td>
+				<td>Accountant</td>
+				<td>$162,700</td>
+			</tr>
+		</tbody>
+		<tfoot></tfoot>
+	</table>
+	<p>
+		Name
+		<label for="textfield">:</label>
+		<input type="text" name="textfield" id="textfield" />
+		<br />
+		Position:
+		<input type="text" name="textfield2" id="textfield2" />
+		<br />
+		Salary:
+		<input type="text" name="textfield3" id="textfield3" />
+		<br />
+		<input type="button" onclick="insertRows()" name="Insert" id="Insert" value="Insert" />
+	</p>
+	<hr />
+	
+</body>
+
+</html>
