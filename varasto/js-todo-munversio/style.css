@@ -1,9 +1,9 @@
 /* (A) SHARED */
-#todo-wrap, #todo-wrap * {
+#ostoslista-wrap, #ostoslista-wrap * {
   font-family: 'Montserrat', serif;
   box-sizing: border-box;
 }
-#todo-wrap input, .todo-item {
+#ostoslista-wrap input, .ostoslista-item {
   border: 0;
   padding: 10px;
   font-size: 16px;
@@ -11,7 +11,7 @@
 }
 
 /* (B) WRAPPER */
-#todo-wrap {
+#ostoslista-wrap {
   background: #f3afaf;
   max-width: 500px;
   margin: 0 auto;
@@ -21,22 +21,22 @@
 }
 
 /* (C) HEADER */
-#todo-wrap h1 { margin: 10px 0;
+#ostoslista-wrap h1 { margin: 10px 0;
 font-size: x-large; }
 
 /* (D) ROW ITEMS */
-#todo-add, .todo-row {
+#ostoslista-add, .ostoslista-row {
   display: flex;
   align-items: center;
 }
-#todo-item, .todo-item {
+#ostoslista-item, .ostoslista-item {
   flex-grow: 1;
   background: #fff;
 }
-.todo-item.todo-ok { background: #cffff4; }
-#todo-save, .todo-del, .todo-done {
+.ostoslista-item.ostoslista-ok { background: #cffff4; }
+#ostoslista-save, .ostoslista-del, .ostoslista-done {
   color: #fff;
   cursor: pointer;
 }
-.todo-del { background: #ed3636; }
-#todo-save, .todo-done { background: #2781cf; }
+.ostoslista-del { background: #ed3636; }
+#ostoslista-save, .ostoslista-done { background: #2781cf; }
