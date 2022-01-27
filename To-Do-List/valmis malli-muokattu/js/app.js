@@ -33,9 +33,8 @@ clear.addEventListener("click", function(){
     location.reload();
 });
 // Show todays date
-const options = {weekday : "long", month:"long", day:"numeric"};
+const options = {weekday : "short", month:"long", day:"numeric"};
 const today = new Date();
-
 dateElement.innerHTML = today.toLocaleDateString("fi-FI", options);
 // add to do function
 function addToDo(toDo, id, done, trash){
@@ -45,15 +44,15 @@ function addToDo(toDo, id, done, trash){
     const item = `<li class="item">
                     <em class="fa ${DONE} co" job="complete" id="${id}"></em>
                     <p class="text ${LINE}">${toDo}</p>
-                    <i class="fa fa-trash-o de" job="delete" id="${id}"></i>
+                    <i class="fa de" job="delete" id="${id}">&#10060</i>
                   </li>
                 `;
-    const position = "beforeend";
+    const position = "afterbegin";
     list.insertAdjacentHTML(position, item);
 }
 // add an item to the list user the enter key
 document.addEventListener("keyup",function(even){
-    if(event.keyCode == 13){
+    if(event.key == 'Enter'){
         const toDo = input.value;
         // if the input isn't empty
         if(toDo){
@@ -81,7 +80,13 @@ function completeToDo(element){
 // remove to do
 function removeToDo(element){
     element.parentNode.parentNode.removeChild(element.parentNode);
-    LIST[element.id].trash = true;
+    if(confirm("Haluatko varmasti poistaa tehtävän?")){
+        document.innerHTML("Poistettu");
+        LIST[element.id].trash = true;
+    }
+    else {
+        document.write("Poisto peruttu");
+    }
 }
 // target the items created dynamically
 list.addEventListener("click", function(event){
@@ -92,6 +97,7 @@ list.addEventListener("click", function(event){
     }else if(elementJob == "delete"){
         removeToDo(element);
     }
+
     // add item to localstorage ( this code must be added where the LIST array is updated)
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });

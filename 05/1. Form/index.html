@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS</title>
+</head>
+<body>
+    <div class="container">
+        <p id="testi"></p>
+        <p id="teksti"></p>
+    <!--<form name="myForm" action="kiitos.html" onsubmit="return validateForm()">Vie aina kiitos-sivulle, mieti, miten cancel palaluttaa tälle sivulle-->
+    <form name="myForm" onsubmit="return validateForm()">
+        <div class="no-border">
+            <label>Email address:<br>
+                <input type="email" name="email" min="" max ="15">
+            </label>
+        </div>
+        <div class="no-border">
+            <label>
+                Comment:<br>
+            </label>
+            <textarea name="comment" minlength="5" maxlength ="10"></textarea>
+        </div>
+        <br>
+        <input type="submit" value="Lähetä" id="btn">
+    </form>
+    
+</div>
+  
+<script src="script.js"></script>    
+</body>
+</html>
