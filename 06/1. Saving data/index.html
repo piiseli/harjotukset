@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS</title>
+</head>
+<body>
+<div class="container">
+    <div class="lomake">
+        <form action="#" method="post" id="theForm">
+            <fieldset>
+                <legend><h4>Choose your Trip</h4></legend>
+                <div>
+                    <label for="destination">Destination:</label>
+                    <input type="text" name="textfield" id="destination" required>
+                </div>
+                <div>
+                    <label for="arrival">Arrival Date:</label>
+                    <input type="date" name="textfield" id="arrival" required>
+                </div>
+                <div id="services" class="border">
+                    Services:
+                    <div>
+                        <label><input type="checkbox" name="wifi" value="Wifi" id="wifi"><span class="checkmark"></span>Wifi</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" name="AC" value="AC" id="AC">Air Conditioning</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" name="minibar" value="minibar" id="minibar">Minibar</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" name="car" value="car" id="car">Car rent</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" name="sauna" value="sauna" id="sauna">Sauna</label>
+                    </div>
+                </div>	
+                <div>
+                    <input type="button" name="button" id="button" value="Reserve" onclick="getData()">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>    
+<script src="script.js"></script>    
+</body>
+</html>

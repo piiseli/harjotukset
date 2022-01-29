@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS</title>
+</head>
+<body>
+    <div class="container">
+    <fieldset>
+        <h4>Calculate a bulk book order.</h4>
+        <div>
+          <label for="quantity">Quantity</label>
+         <input
+            type="number"
+            name="quantity"
+            id="quantity"
+            value="1"
+            min="1"
+            required
+          />
+        </div>
+        <div>
+          <label for="price">Price Per Unit</label>
+          <input type="text" name="price" id="price" value="1.00" required />
+        </div>
+        <div>
+          <label for="tax">VAT (%)</label>
+          <input type="text" name="tax" id="tax" value="0.0" required />
+        </div>
+        <div>
+          <label for="discount">Discount %</label>
+          <input
+            type="text"
+            name="discount"
+            id="discount"
+            value="0.00"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="submit"
+            value="Calculate"
+            id="submit-calculate"
+            onClick="calculate()"
+          />
+        </div>
+        <div>
+          <label for="total">Price without shipping fees</label>
+          <input type="text" name="total" id="total" value="0.00" />
+        </div>
+        
+        <div>
+            <label for="shipping">Shipping fees</label>
+            <input type="text" name="shipping" id="shipping" value="0.00"  />
+          </div>
+          <div>
+            <input
+              type="submit"
+              value="Calculate"
+              id="submit-shipping"
+              onClick="calculate()"
+            />
+          </div>
+          <div>
+            <label for="shipping">Price with shipping fees</label>
+            <input type="text" name="shipping" id="shipping" value="0.00" />
+          </div>
+      </fieldset>
+    </div>
+      
+<script src="script.js"></script>    
+</body>
+</html>
