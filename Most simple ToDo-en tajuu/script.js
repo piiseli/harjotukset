@@ -4,6 +4,7 @@ document.querySelector('form').addEventListener('submit', submitForm);
 function submitForm(e) {
     e.preventDefault();
     let input = document.querySelector('input');
+
     if (input.value != '')
         addTodo(input.value);
     input.value = '';
@@ -14,8 +15,8 @@ function addTodo(todo) {
     let li = document.createElement('li');
     li.innerHTML = `
         <span class="todo-item">${todo}</span>
-        <button name="checkButton"><i class="fas fa-check-square"></i></button>
-        <button name="deleteButton" ><i class="fas fa-trash"></i></button>
+        <button name="checkButton"><em class="fas fa-check-square"></em></button>
+        <button name="deleteButton" ><em class="fas fa-trash"></em></button>
     `;
     li.classList.add('todo-list-item');
     ul.appendChild(li);

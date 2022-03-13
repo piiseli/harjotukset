@@ -51,7 +51,7 @@ function addToDo(toDo, id, done, trash){
     list.insertAdjacentHTML(position, item);
 }
 // add an item to the list user the enter key
-document.addEventListener("keyup",function(even){
+document.addEventListener("keyup",function(event){
     if(event.key == 'Enter'){
         const toDo = input.value;
         // if the input isn't empty
